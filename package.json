@@ -1,6 +1,6 @@
 {
   "name": "paul-jason-portfolio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Full-stack developer portfolio — React (Vite) frontend + Node/Express backend.",
   "private": true,
   "scripts": {

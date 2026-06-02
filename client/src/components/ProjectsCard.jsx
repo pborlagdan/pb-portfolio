@@ -1,8 +1,9 @@
-import React from "react";
 import { projects, projectsLink } from "../data/content";
 import Icon from "./Icon";
 
 export default function ProjectsCard() {
+  const items = [...projects, ...projects, ...projects];
+
   return (
     <div className="card">
       <div className="ch">
@@ -11,25 +12,25 @@ export default function ProjectsCard() {
         </span>
         <h2>Projects</h2>
       </div>
-      <div className="csub">Some of the work I've shipped</div>
-      <div className="thumbs">
-        {projects.map((p, i) => (
-          <div className="thumb" key={i}>
-            <span className="bdg">{p.badge}</span>
-            <div
-              className="g"
-              style={{
-                background: p.glow,
-                top: p.y,
-                left: p.x,
-                right: p.right,
-              }}
-            />
-            <span className="tl">{p.title}</span>
-          </div>
-        ))}
+      <div className="csub">Here are some of the projects I have worked on</div>
+      <div className="pscroll-wrap">
+        <div className="pscroll-track">
+          {items.map((p, i) => (
+            <div className="pscroll-thumb" key={i}>
+              {p.image && (
+                <img src={p.image} alt={p.title} />
+              )}
+              <span className="bdg">{p.badge}</span>
+              <div
+                className="g"
+                style={{ background: p.glow, top: p.y, left: p.x, right: p.right }}
+              />
+              <span className="tl">{p.title}</span>
+            </div>
+          ))}
+        </div>
       </div>
-      <a href={projectsLink} className="vall">
+      <a href={projectsLink} className="vall" style={{ marginTop: "1rem" }}>
         <Icon name="briefcase" /> View All Projects
       </a>
     </div>

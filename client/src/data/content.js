@@ -9,7 +9,7 @@ export const profile = {
   fullName: "Paul Jason Borlagdan",   // used in the footer
   role: "Full Stack Developer",
   avatarInitials: "PB",               // used if no photo is set
-  avatarImage: "",                    // e.g. "/avatar.jpg" (put the file in client/public)
+  avatarImage: "/ptitlehead.jpg",     // e.g. "/avatar.jpg" (put the file in client/public)
   available: true,                    // toggles the green "Available To Work" pill
   email: "paulkezo1008@gmail.com",
   linkedin: "https://www.linkedin.com/in/paul-jason-borlagdan-a40a7518a/",

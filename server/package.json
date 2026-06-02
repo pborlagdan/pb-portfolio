@@ -1,6 +1,6 @@
 {
   "name": "portfolio-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node/Express backend for Paul Jason Borlagdan's portfolio (contact API).",
   "type": "module",
   "main": "index.js",
