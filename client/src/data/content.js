@@ -5,7 +5,7 @@
 // ============================================================
 
 export const profile = {
-  name: "Paul Borlagdan",                 // shown big under the avatar
+  name: "Paul Jason Borlagdan",                 // shown big under the avatar
   fullName: "Paul Jason Borlagdan",   // used in the footer
   role: "Full Stack Software Engineer",
   avatarInitials: "PB",               // used if no photo is set
