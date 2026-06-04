@@ -1,8 +1,7 @@
-import React from "react";
 import { profile } from "../data/content";
 import Icon, { LinkedInIcon } from "./Icon";
 
-export default function ProfileCard() {
+export default function ProfileCard({ onResumeClick }) {
   return (
     <div className="card">
       <div className="ptop">
@@ -41,7 +40,7 @@ export default function ProfileCard() {
         </a>
         {profile.github ? (
           <a href={profile.github} target="_blank" rel="noopener noreferrer" className="pbtn pbtn-gho">
-            <Icon name="code" className="" /> GitHub
+            <Icon name="code" /> GitHub
           </a>
         ) : (
           <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="pbtn pbtn-gho">
@@ -49,6 +48,15 @@ export default function ProfileCard() {
           </a>
         )}
       </div>
+
+      <button
+        type="button"
+        className="pbtn pbtn-gho"
+        style={{ width: "100%", marginTop: ".75rem" }}
+        onClick={onResumeClick}
+      >
+        <Icon name="briefcase" /> View Resume
+      </button>
     </div>
   );
 }

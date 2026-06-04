@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { profile } from "./data/content";
 import ProfileCard from "./components/ProfileCard";
 import ServicesCard from "./components/ServicesCard";
@@ -8,8 +8,15 @@ import Stats from "./components/Stats";
 import ContactCTA from "./components/ContactCTA";
 import WorkProcess from "./components/WorkProcess";
 import Highlights from "./components/Highlights";
+import Resume from "./components/Resume";
 
 export default function App() {
+  const [showResume, setShowResume] = useState(false);
+
+  if (showResume) {
+    return <Resume onClose={() => setShowResume(false)} />;
+  }
+
   return (
     <>
       <div className="glow" />
@@ -17,7 +24,7 @@ export default function App() {
         <div className="grid">
           {/* LEFT */}
           <div className="col">
-            <ProfileCard />
+            <ProfileCard onResumeClick={() => setShowResume(true)} />
             <ServicesCard />
             <ProjectsCard />
           </div>
@@ -27,6 +34,12 @@ export default function App() {
             <TechStack />
             <Stats />
             <ContactCTA />
+            <footer className="foot">
+              <p>
+                Made with 💜 by <b>{profile.fullName}</b>
+              </p>
+              <p style={{ marginTop: ".25rem" }}>© 2026 All rights reserved · Davao City, PH</p>
+            </footer>
           </div>
 
           {/* RIGHT */}
@@ -35,13 +48,6 @@ export default function App() {
             <Highlights />
           </div>
         </div>
-
-        <footer className="foot">
-          <p>
-            Made with 💜 by <b>{profile.fullName}</b>
-          </p>
-          <p style={{ marginTop: ".25rem" }}>© 2026 All rights reserved · Davao City, PH</p>
-        </footer>
       </div>
     </>
   );

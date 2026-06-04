@@ -9,7 +9,7 @@ export default function ContactCTA() {
       </div>
       <h2>Let's Work Together</h2>
       <p>
-        and make your ideas come to <b>real</b>
+        and make your ideas come to <b>reality</b>
       </p>
       <div className="cta-links">
         <a href={`mailto:${profile.email}`} className="cl" title="Email">

@@ -30,6 +30,12 @@ const paths = {
   ),
   send: <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />,
   arrowUpRight: <path d="M7 17L17 7M17 7H8M17 7v9" />,
+  x: (
+    <>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </>
+  ),
 };
 
 export default function Icon({ name, className }) {
