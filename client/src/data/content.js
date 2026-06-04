@@ -9,7 +9,7 @@ export const profile = {
   fullName: "Paul Jason Borlagdan",   // used in the footer
   role: "Full Stack Software Engineer",
   avatarInitials: "PB",               // used if no photo is set
-  avatarImage: "public/ptitlehead.jpg",     // e.g. "/avatar.jpg" (put the file in client/public)
+  avatarImage: `${import.meta.env.BASE_URL}ptitlehead.jpg`,
   available: true,                    // toggles the green "Available To Work" pill
   phone: "+63 9176265182",
   email: "paulkezo1008@gmail.com",
